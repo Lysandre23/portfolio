@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/intro.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/cursor.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <title>Portfolio</title>
+    </head>
+    <body>
+        <svg id="introSvg" viewbox="0 0 52 7">
+            <g class="l0">
+                <path d="M1 1 l3 0"/>
+                <path d="M1 6 l3 0"/>
+                <path d="M1 1 l0 5"/>
+            </g>
+            <g class="l1">
+                <path d="M6 6 l3 0"/>
+                <path d="M6 1 l0 5"/>
+            </g>
+            <g class="l2">
+                <path d="M11 1 l3 0"/>
+                <path d="M11 6 l3 0"/>
+                <path d="M12.5 1 l0 5"/>
+            </g>
+            <g class="l3">
+                <path d="M16 1 l3 0"/>
+                <path d="M16 6 l3 0"/>
+                <path d="M16 1 l0 5"/>
+            </g>
+            <g class="l4">
+                <path d="M21 3.5 l3 -2.5"/>
+                <path d="M21 3.5 l3 2.5"/>
+                <path d="M21 1 l0 5"/>
+            </g>
+            <g class="l5">
+                <path d="M33 1 l0 5"/>
+                <path d="M36 1 l0 5"/>
+                <path d="M33 3.5 l3 0"/>
+            </g>
+            <g class="l6">
+                <path d="M38 1 l3 0"/>
+                <path d="M38 3.5 l2 0"/>
+                <path d="M38 6 l3 0"/>
+                <path d="M38 1 l0 5"/>
+            </g>
+            <g class="l7">
+                <path d="M44 3 l2 3"/>
+                <path d="M43 1 l3 0"/>
+                <path d="M46 1 l0 2"/>
+                <path d="M43 3 l3 0"/>
+                <path d="M43 1 l0 5"/>
+            </g>
+            <g class="l8">
+                <path d="M48 1 l3 0"/>
+                <path d="M48 3.5 l2 0"/>
+                <path d="M51 6 l-3 0"/>
+                <path d="M48 1 l0 5"/>
+            </g>
+            <g>
+                <path d=""/>
+            </g>
+        </svg>
+        <div id="NE_container">
+            <p onclick="hide_tag('who')" class="tag">Who am I ?</p>
+        </div>
+        <div id="NO_container">
+            <p onclick="hide_tag('studies')" class="tag">Studies</p>
+        </div>
+        <div id="S_container">
+            <p onclick="hide_tag('projects')" class="tag">Projects</p>
+        </div>
+        <svg onclick="show_tag()" id="close_section_button" viewbox="0 0 50 50" width="50" stroke="black" stroke-width="3" stroke-linecap="round">
+            <path d="M15 15 l 20 20"/>
+            <path d="M15 35 l20 -20"/>
+        </svg>
+        <div id="studies">
+            <p class="title">2017 - 2020</p>
+            <p class="info">High school - Lycée Jean-Baptiste Vuillaume, Mirecourt (88)</p>
+            <p class="title">2020 - 2025</p>
+            <p class="info">Engeenering school - Polytech Nancy, Université de Lorraine</p>
+            <p class="title">Erasmus exchange</p>
+            <p class="info">University of Linköping, Sweden 🇸🇪</p>
+            <p class="title">Main fields of study</p>
+            <p class="info">Computer science, Robotic, Automatic</p>
+        </div>
+        <div id="who">
+            <p class="title">Alexandre Humbert</p>
+            <p>Born in <span class="yellow_tag" onclick="france_appears()">Nancy</span>, France (23 Avril 2003)</p>
+            <p>Love <span class="green_tag" onclick="change_cursor('tree')">hiking</span>, <span class="salmon_tag" onclick="change_cursor('bike')">biking</span>, <span class="pink_tag" onclick="change_cursor('gaming')">Gaming</span> and <span class="blue_tag" onclick="change_cursor('eminem')">Eminem</span>.</p>
+            <div class="line">
+                <p>Coding skills : </p>
+                <span style="color: #FF5733"><i class="fa-brands fa-html5"></i></span>
+                <span style="color: #f7df1e"><i class="fa-brands fa-js"></i></span>
+                <span style="color: #016BC0"><i class="fa-brands fa-css3-alt"></i></span>
+                <span style="color: #61DBFB"><i class="fa-brands fa-react"></i></span>
+                <span style="color: #306998"><i class="fa-brands fa-python"></i></span>
+            </div>
+            <p>Like creative coding but only good in mathematics ...</p>
+            <div class="line">
+                <p class="title">Hint</p>
+                <p class="info">Click on the Slim Shady</p>
+            </div>
+        </div>
+        <div id="projects">
+            <div class="line">
+                <p class="title">Raycasting simulation</p>
+                <i id="go_to_raycast" class="fa-regular fa-eye link"></i>
+            </div>
+            <div class="line">
+                <p class="title">Group simulation with birds</p>
+                <i id="go_to_birds" class="fa-regular fa-eye link"></i>
+            </div>
+            <div class="line">
+                <p class="title">Isometric animation</p>
+                <i id="go_to_isocube" class="fa-regular fa-eye link"></i>
+            </div>
+            <div class="line">
+                <p class="title">Pong game (find the right controller)</p>
+                <i id="go_to_pong" class="fa-regular fa-eye link"></i>
+            </div>
+            <div class="line">
+                <p class="title">Sudoku solver</p>
+                <i id="go_to_sudoku" class="fa-regular fa-eye link"></i>
+            </div>
+            
+            <svg viewbox="0 0 10 10" id="scroll_arrow" fill="#ffffffff" stroke="black" stroke-linejoin="round" stroke-linecap="round">
+                <path d="M5 1 l0 8 l-3 -3 l3 3 l3 -3"/>
+            </svg>
+        </div>
+        <div id="cursor"></div>
+        <div id="inner_cursor"></div>
+        <script src="js/anim.js"></script>
+        <script src="js/cursor.js"></script>
+    </body>
+</html>

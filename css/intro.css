@@ -1,0 +1,659 @@
+#introSvg {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    stroke: black;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: rgba(255, 255, 255, 0);
+    transition: .1s;
+    transform-origin: left;
+    border: 1px solid;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+#introSvg.tag_hide {
+    padding-top: 70%;
+    padding-bottom: 70%;
+}
+
+#introSvg:hover {
+    stroke-width: 1.3;
+}
+
+#introSvg.gone {
+    transition: 1s;
+    top: -50%;
+}
+g:hover {
+    stroke: #a29bfe;
+}
+
+.letter8_top {
+    animation: letter8_top_collapse .1s forwards;
+}
+.letter8_bottom {
+    animation: letter8_bottom_collapse .1s forwards;
+}
+.letter8_mid {
+    animation: letter8_mid_collapse .1s forwards;
+}
+.letter8_left {
+    animation: letter8_left_collapse .1s forwards;
+}
+
+@keyframes letter8_top_collapse {
+    99% {
+        d: path("M48 1 l0 2.5");
+        stroke: black;
+    }
+    100% {
+        stroke: rgba(255, 255, 255, 0);
+    }
+}
+@keyframes letter8_bottom_collapse {
+    99% {
+        d: path("M48 2.5 l0 2.5");
+        stroke: black;
+    }
+    100% {
+        stroke: rgba(255, 255, 255, 0);
+    }
+}
+@keyframes letter8_mid_collapse {
+    99% {
+        d: path("M48 3.5 l0 0");
+        stroke: black;
+    }
+    100% {
+        stroke: rgba(255, 255, 255, 0);
+    }
+}
+@keyframes letter8_left_collapse {
+    100% {
+        d: path("M48 3.5 l0 0")
+    }
+}
+
+/* ------------------------------------- */
+
+.letter7_diag {
+    animation: letter7_diag_collapse .1s forwards;
+}
+.letter7_top {
+    animation: letter7_top_collapse .1s forwards;
+}
+.letter7_right {
+    animation: letter7_right_collapse .1s forwards;
+}
+.letter7_bottom {
+    animation: letter7_bottom_collapse .1s forwards;
+}
+.letter7_left {
+    animation: letter7_left_collapse .1s forwards;
+}
+
+@keyframes letter7_left_collapse {
+    100% {
+        d: path("M43 3.5 l0 0");
+        stroke: black;
+    }
+}
+@keyframes letter7_bottom_collapse {
+    99% {
+        d: path("M43 3 l0 0");
+        stroke: black;
+    }
+    100% {
+        stroke: rgba(255, 255, 255, 0);
+    }
+}
+@keyframes letter7_right_collapse {
+    99% {
+        d: path("M43 1 l0 2");
+        stroke: black;
+    }
+    100% {
+        stroke: rgba(255, 255, 255, 0);
+    }
+}
+@keyframes letter7_top_collapse {
+    99% {
+        d: path("M43 1 l0 0");
+        stroke: black;
+    }
+    100% {
+        stroke: rgba(255, 255, 255, 0);
+    }
+}
+
+@keyframes letter7_diag_collapse {
+    99% {
+        d: path("M44 3 l0 0");
+        stroke: black;
+    }
+    100% {
+        stroke: rgba(255, 255, 255, 0);
+    }
+}
+
+/* ------------------------------------- */
+
+.letter6_top {
+    animation: letter6_top_collapse .1s forwards;
+}
+.letter6_bottom {
+    animation: letter6_bottom_collapse .1s forwards;
+}
+.letter6_mid {
+    animation: letter6_mid_collapse .1s forwards;
+}
+.letter6_left {
+    animation: letter6_left_collapse .1s forwards;
+}
+
+@keyframes letter6_top_collapse {
+    99% {
+        d: path("M38 1 l0 2.5");
+        stroke: black;
+    }
+    100% {
+        stroke: rgba(255, 255, 255, 0);
+    }
+}
+@keyframes letter6_bottom_collapse {
+    99% {
+        d: path("M38 2.5 l0 2.5");
+        stroke: black;
+    }
+    100% {
+        stroke: rgba(255, 255, 255, 0);
+    }
+}
+@keyframes letter6_mid_collapse {
+    99% {
+        d: path("M38 3.5 l0 0");
+        stroke: black;
+    }
+    100% {
+        stroke: rgba(255, 255, 255, 0);
+    }
+}
+@keyframes letter6_left_collapse {
+    100% {
+        d: path("M38 3.5 l0 0")
+    }
+}
+
+/* ------------------------------------- */
+
+.letter5_right {
+    animation: letter5_right_collapse .1s forwards;
+}
+.letter5_left {
+    animation: letter5_left_collapse .1s forwards;
+}
+.letter5_mid {
+    animation: letter5_mid_collapse .1s forwards;
+}
+
+@keyframes letter5_mid_collapse {
+    100% {
+        d: path("M33 3.5 l0 0");
+    }
+}
+
+@keyframes letter5_right_collapse {
+    99% {
+        d: path("M36 3.5 l0 0");
+        stroke: black;
+    }
+    100% {
+        stroke: rgba(255, 255, 255, 0);
+    }
+}
+@keyframes letter5_left_collapse {
+    99% {
+        d: path("M33 3.5 l0 0");
+        stroke: black;
+    }
+    100% {
+        stroke: rgba(255, 255, 255, 0);
+    }
+}
+
+/* ------------------------------------- */
+
+.letter4_top {
+    animation: letter4_top_collapse .1s forwards;
+}
+.letter4_left {
+    animation: letter4_left_collapse .1s forwards;
+}
+.letter4_bottom {
+    animation: letter4_bottom_collapse .1s forwards;
+}
+
+@keyframes letter4_top_collapse {
+    99% {
+        d: path("M21 3.5 l0 0");
+        stroke: black;
+    }
+    100% {
+        stroke: rgba(255, 255, 255, 0);
+    }
+}
+@keyframes letter4_bottom_collapse {
+    99% {
+        d: path("M21 3.5 l0 0");
+        stroke: black;
+    }
+    100% {
+        stroke: rgba(255, 255, 255, 0);
+    }
+}
+@keyframes letter4_left_collapse {
+    100% {
+        d: path("M21 3.5 l0 0");
+    }
+}
+
+/* ------------------------------------- */
+
+.letter3_top {
+    animation: letter3_top_collapse .1s forwards;
+}
+.letter3_left {
+    animation: letter3_left_collapse .1s forwards;
+}
+.letter3_bottom {
+    animation: letter3_bottom_collapse .1s forwards;
+}
+
+@keyframes letter3_top_collapse {
+    99% {
+        d: path("M16 1 l0 0");
+        stroke: black;
+    }
+    100% {
+        stroke: rgba(255, 255, 255, 0);
+    }
+}
+@keyframes letter3_bottom_collapse {
+    99% {
+        d: path("M16 6 l0 0");
+        stroke: black;
+    }
+    100% {
+        stroke: rgba(255, 255, 255, 0);
+    }
+}
+@keyframes letter3_left_collapse {
+    100% {
+        d: path("M16 3.5 l0 0");
+    }
+}
+
+/* ------------------------------------- */
+
+.letter2_top {
+    animation: letter2_top_collapse .1s forwards;
+}
+.letter2_mid {
+    animation: letter2_mid_collapse .1s forwards;
+}
+.letter2_bottom {
+    animation: letter2_bottom_collapse .1s forwards;
+}
+
+@keyframes letter2_top_collapse {
+    99% {
+        d: path("M12.5 1 l0 0");
+        stroke: black;
+    }
+    100% {
+        stroke: rgba(255, 255, 255, 0);
+    }
+}
+@keyframes letter2_bottom_collapse {
+    99% {
+        d: path("M12.5 6 l0 0");
+        stroke: black;
+    }
+    100% {
+        stroke: rgba(255, 255, 255, 0);
+    }
+}
+@keyframes letter2_mid_collapse {
+    100% {
+        d: path("M11 3.5 l0 0");
+    }
+}
+
+/* ------------------------------------- */
+
+.letter1_left {
+    animation: letter1_left_collapse .1s forwards;
+}
+.letter1_bottom {
+    animation: letter1_bottom_collapse .1s forwards;
+}
+
+@keyframes letter1_left_collapse {
+    100% {
+        d: path("M6 3.5 l0 0");
+    }
+}
+@keyframes letter1_bottom_collapse {
+    99% {
+        d: path("M6 6 l0 0");
+        stroke: black;
+    }
+    100% {
+        stroke: rgba(255, 255, 255, 0);
+    }
+}
+
+/* ------------------------------------- */
+
+.letter0_top {
+    animation: letter0_top_collapse .1s forwards;
+}
+.letter0_left {
+    animation: letter0_left_collapse .1s forwards;
+}
+.letter0_bottom {
+    animation: letter0_bottom_collapse .1s forwards;
+}
+
+@keyframes letter0_top_collapse {
+    99% {
+        d: path("M1 1 l0 0");
+        stroke: black;
+    }
+    100% {
+        stroke: rgba(255, 255, 255, 0);
+    }
+}
+@keyframes letter0_bottom_collapse {
+    99% {
+        d: path("M1 6 l0 0");
+        stroke: black;
+    }
+    100% {
+        stroke: rgba(255, 255, 255, 0);
+    }
+}
+@keyframes letter0_left_collapse {
+    100% {
+        d: path("M1 3.5 l0 0");
+    }
+}
+
+/* ------------------------------------- */
+
+.letter0_join {
+    animation: .3s letter0_join forwards;
+    z-index: 2;
+}
+.letter1_join {
+    animation: .3s letter1_join forwards;
+}
+.letter2_join {
+    animation: .3s letter2_join forwards;
+}
+.letter3_join {
+    animation: .3s letter3_join forwards;
+}
+.letter4_join {
+    animation: .3s letter4_join forwards;
+}
+.letter5_join {
+    animation: .3s letter5_join forwards;
+}
+.letter6_join {
+    animation: .3s letter6_join forwards;
+}
+.letter7_join {
+    animation: .3s letter7_join forwards;
+}
+.letter8_join {
+    animation: .3s letter8_join forwards;
+}
+
+@keyframes letter0_join {
+    0% {
+        d: path("M1 3.5 l0 0");
+    }
+    100% {
+        d: path("M26 3.5 l0 0");
+    }
+}
+@keyframes letter1_join {
+    0% {
+        d: path("M6 3.5 l0 0");
+    }
+    100% {
+        d: path("M26 3.5 l0 0");
+    }
+}
+@keyframes letter2_join {
+    0% {
+        d: path("M11 3.5 l0 0");
+    }
+    100% {
+        d: path("M26 3.5 l0 0");
+    }
+}
+@keyframes letter3_join {
+    0% {
+        d: path("M16 3.5 l0 0");
+    }
+    99% {
+        d: path("M26 3.5 l0 0");
+    }
+    100% {
+        stroke: rgba(255, 255, 255, 0);
+    }
+}
+@keyframes letter4_join {
+    0% {
+        d: path("M21 3.5 l0 0");
+    }
+    99% {
+        d: path("M26 3.5 l0 0");
+    }
+    100% {
+        stroke: rgba(255, 255, 255, 0);
+    }
+}
+@keyframes letter5_join {
+    0% {
+        d: path("M33 3.5 l0 0");
+    }
+    99% {
+        d: path("M26 3.5 l0 0");
+    }
+    100% {
+        stroke: rgba(255, 255, 255, 0);
+    }
+}
+@keyframes letter6_join {
+    0% {
+        d: path("M38 3.5 l0 0");
+    }
+    99% {
+        d: path("M26 3.5 l0 0");
+    }
+    100% {
+        stroke: rgba(255, 255, 255, 0);
+    }
+}
+@keyframes letter7_join {
+    0% {
+        d: path("M43 3.5 l0 0");
+    }
+    99% {
+        d: path("M26 3.5 l0 0");
+    }
+    100% {
+        stroke: rgba(255, 255, 255, 0);
+    }
+}
+@keyframes letter8_join {
+    0% {
+        d: path("M48 3.5 l0 0");
+    }
+    99% {
+        d: path("M26 3.5 l0 0");
+    }
+    100% {
+        stroke: rgba(255, 255, 255, 0);
+    }
+}
+
+/* ------------------------------------- */
+
+.arrow_NE {
+    animation: .2s arrow_NE forwards;
+}
+.arrow_NE_top {
+    animation: .2s arrow_NE_top forwards;
+}
+.arrow_NE_right {
+    animation: .2s arrow_NE_right forwards;
+}
+
+@keyframes arrow_NE {
+    0% {
+        d: path("M26 3.5 l0 0");
+    }
+    100% {
+        d: path("M26 3.5 l2.5 -2.5");
+    }
+}
+@keyframes arrow_NE_top {
+    0% {
+        d: path("M26 3.5 l2.5 -2.5");
+    }
+    100% {
+        d: path("M26 1 l2.5 0");
+    }
+}
+@keyframes arrow_NE_right {
+    0% {
+        d: path("M26 3.5 l2.5 -2.5");
+    }
+    100% {
+        d: path("M28.5 3.5 l0 -2.5");
+    }
+}
+
+/* ------------------------------------- */
+
+.arrow_NO_left {
+    animation: .2s arrow_NO_left forwards;
+}
+.arrow_NO {
+    animation: .2s arrow_NO forwards;
+}
+.arrow_NO_top {
+    animation: .2s arrow_NO_top forwards;
+}
+
+@keyframes arrow_NO_top {
+    0% {
+        d: path("M28.5 3.5 l0 -2.5");
+    }
+    100% {
+        d: path("M26 1 l-2.5 0");
+    }
+}
+@keyframes arrow_NO_left {
+    0% {
+        d: path("M26 1 l2.5 0");
+    }
+    100% {
+        d: path("M23.5 3.5 l0 -2.5");
+    }
+}
+@keyframes arrow_NO {
+    0% {
+        d: path("M26 3.5 l2.5 -2.5");
+    }
+    100% {
+        d: path("M26 3.5 l-2.5 -2.5");
+    }
+}
+
+/* ------------------------------------- */
+
+.arrow_S_left {
+    animation: .2s arrow_S_left forwards;
+}
+.arrow_S {
+    animation: .2s arrow_S forwards;
+}
+.arrow_S_right {
+    animation: .2s arrow_S_right forwards;
+}
+.arrow_S_left_collapse {
+    animation: .2s arrow_S_left_collapse forwards;
+}
+.arrow_S_collapse {
+    animation: .2s arrow_S_collapse forwards;
+}
+.arrow_S_right_collapse {
+    animation: .2s arrow_S_right_collapse forwards;
+}
+
+@keyframes arrow_S_right {
+    0% {
+        d: path("M23.5 3.5 l0 -2.5");
+    }
+    100% {
+        d: path("M28 4 l-2 2");
+    }
+}
+@keyframes arrow_S_left {
+    0% {
+        d: path("M26 1 l-2.5 0");
+    }
+    100% {
+        d: path("M24 4 l2 2");
+    }
+}
+@keyframes arrow_S {
+    0% {
+        d: path("M26 3.5 l-2.5 -2.5");
+    }
+    100% {
+        d: path("M26 2.5 l0 3.5");
+    }
+}
+@keyframes arrow_S_right_collapse {
+    0% {
+        d: path("M28 4 l-2 2");
+    }
+    100% {
+        d: path("M26 3.5 l0 0");
+    }
+}
+@keyframes arrow_S_left_collapse {
+    0% {
+        d: path("M24 4 l2 2");
+    }
+    100% {
+        d: path("M26 3.5 l0 0");
+    }
+}
+@keyframes arrow_S_collapse {
+    0% {
+        d: path("M26 2.5 l0 3.5");
+    }
+    100% {
+        d: path("M26 3.5 l0 0");
+    }
+}

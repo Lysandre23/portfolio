@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap');
+
+* {
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#hud {
+    margin-bottom: 10px;
+}
+
+.p5Canvas {
+    margin-top: 30px;
+    border-radius: 5px;
+    border: 1px solid rgb(230, 230, 230);
+}
+
+.button {
+    font-size: 20px;
+    background-color: white;
+    border: 1px solid #7d5fff;
+    color: #7d5fff;
+    padding: 10px;
+    border-radius: 3px;
+    font-family: 'Nova Mono', monospace;
+    transition: 0.2s ease-in;
+}
+.button:hover {
+    color: white;
+    border-radius: 10px;
+    background-color: #7d5fff;
+    cursor: pointer;
+}
+.button:active {
+
+}
+
+#generateButton {
+    margin-top: 30px;
+}

@@ -1,0 +1,52 @@
+html {
+    cursor: none;
+}
+
+#cursor {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 5;
+    border: 3px solid black;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+#inner_cursor {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: black;
+    pointer-events: none;
+    z-index: 6;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+#inner_cursor.invisible {
+    background-color: rgba(255, 255, 255, 0);
+}
+
+img#cursor {
+    width: 40px;
+    height: auto;
+    border-radius: 0px;
+}
+
+img#cursor.eminem {
+    animation: .5s bump infinite;
+}
+
+@keyframes bump {
+    45% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    55% {
+        transform: scale(1);
+    }
+}
