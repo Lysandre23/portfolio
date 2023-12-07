@@ -11,6 +11,23 @@
         <title>Portfolio</title>
     </head>
     <body>
+        <div id="ending">
+            <div id="container">
+                <span id="text1"></span>
+                <span id="text2"></span>
+            </div>
+        
+            <svg id="filters">
+                <defs>
+                    <filter id="threshold">
+                        <feColorMatrix in="SourceGraphic" type="matrix" values="1 0 0 0 0
+                                                0 1 0 0 0
+                                                0 0 1 0 0
+                                                0 0 0 255 -140" />
+                    </filter>
+                </defs>
+            </svg>
+        </div>
         <svg id="introSvg" viewbox="0 0 52 7">
             <g class="l0">
                 <path d="M1 1 l3 0"/>
@@ -135,5 +152,6 @@
         <div id="inner_cursor"></div>
         <script src="js/anim.js"></script>
         <script src="js/cursor.js"></script>
+        <script src="js/ending.js"></script>
     </body>
 </html>

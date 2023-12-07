@@ -15,6 +15,7 @@ document.addEventListener("mousemove", (e) => {
 });
 
 function change_cursor(nc) {
+    check_ending(nc, false);
     if(tunned_cursor == nc) {
         cursor.outerHTML = "<div id='cursor'></div>"
         offset = {x: 10.5, y: 10.5};
@@ -24,7 +25,7 @@ function change_cursor(nc) {
         cursor.classList.remove("eminem");
     }else{
         tunned_cursor = nc;
-        cursor.outerHTML = "<img id='cursor' style='border: none;' src='../assets/" + nc + ".png' width='60' height='60'/>"
+        cursor.outerHTML = "<img id='cursor' style='border: none;' src='./assets/" + nc + ".png' width='60'/>"
         offset = {x: 15, y: 20};
         cursor = document.getElementById("cursor");
         inner_cursor.classList.add("invisible");

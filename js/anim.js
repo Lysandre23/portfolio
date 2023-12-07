@@ -1,8 +1,23 @@
 let introSvg = document.getElementById("introSvg");
 let childs = introSvg.children;
 let interaction_active = false;
+let intro_made = false;
+let info_viewed = [];
+// ALL INFO
+/*
+who
+studies
+projects
+gaming
+eminem
+biking
+hiking
+nancy
+*/
 
 introSvg.addEventListener("click", function() {
+    if(intro_made) return 0;
+    intro_made = true;
     childs[8].children[0].classList.add("letter8_top");
     childs[8].children[2].classList.add("letter8_bottom");
     setTimeout(() => {
@@ -139,6 +154,7 @@ introSvg.addEventListener("click", function() {
 
 function hide_tag(section) {
     if(interaction_active) {
+        check_ending(section, false);
         interaction_active = false;
         document.getElementById("S_container").classList.toggle("visible");
         document.getElementById("NO_container").classList.toggle("visible");
@@ -173,6 +189,7 @@ function hide_tag(section) {
 
 function show_tag() {
     if(interaction_active) {
+        check_ending("", true);
         interaction_active = false;
         document.getElementById('studies').classList.remove("visible");
         document.getElementById('who').classList.remove("visible");
@@ -239,6 +256,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function france_appears() {
     var france = document.createElement('div');
-    france.innerHTML = "<img src='../assets/france.svg' class='france'/>"
+    france.innerHTML = "<img src='./assets/france.svg' class='france'/>"
     document.body.appendChild(france);
+    check_ending("france", false);
+}
+
+function check_ending(a, b) {
+    if(info_viewed.indexOf(a) == -1 && a != "") info_viewed.push(a);
+    if(info_viewed.length == 8 && b) {
+        document.getElementById("ending").style.visibility = "visible";
+        ending_animate();
+    }
 }
