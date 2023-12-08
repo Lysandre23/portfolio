@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>IHM</title>
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/p5.min.js"></script>
+        <link rel="stylesheet" href="css/Switch.css">
+        <link rel="stylesheet" href="css/Checkbox.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="js/Carpet.js"></script>
+        <script src="js/Road.js"></script>
+        <script src="js/Piston.js"></script>
+        <script src="js/Barrier.js"></script>
+        <script src="js/Robot.js"></script>
+        <script src="js/System.js"></script>
+        <script src="js/lang.js"></script>
+        <script src="js/script.js"></script>
+    </head>
+    <body>
+        <img class="logoSoteria" onclick="openSoteriaWebsite()" src="assets/logoSoteria.png">
+        <div class="menu">
+            <div>
+                <button onclick="toggleLanguage()" onmouseenter="toggleInfoMenuButton(this)" onmouseleave="toggleInfoMenuButton(this)"><i class="fa-solid fa-language"></i></button>
+                <p id="textButtonLanguageMenu">Language &#128130;</p>
+            </div>
+            <div>
+                <button onclick="showRefreshModal()" onmouseenter="toggleInfoMenuButton(this)" onmouseleave="toggleInfoMenuButton(this)"><i class="fa-solid fa-arrows-rotate"></i></button>
+                <p id="textButtonRefreshMenu">Refresh</p>
+            </div>
+            <div>
+                <button onclick="showDestroyModal()" onmouseenter="toggleInfoMenuButton(this)" onmouseleave="toggleInfoMenuButton(this)"><i class="fa-solid fa-skull"></i></button>
+                <p id="textButtonDestroyMenu">Destroy</p>
+            </div>
+        </div>
+        <div class="destroyModal modal">
+            <p id="textConfirmationDestroyModal">Do you confirm the hacking of the entire system ?</p>
+            <div class="modalBar">
+                <button id="buttonCloseDestroyModal" onclick="closeDestroyModal()">No</button>
+                <button id="buttonConfirmDestroyModal" onclick="destroy()">Yes</button>
+            </div>
+        </div>
+        <div class="destroyLoader"><div></div></div>
+        <div class="refreshModal modal">
+            <p id="textConfirmationRefreshModal">Do you confirm the whole system reset ?</p>
+            <div class="modalBar">
+                <button id="buttonCloseRefreshModal" onclick="closeRefreshModal()">No</button>
+                <button id="buttonConfirmRefreshModal" onclick="refresh()">Yes</button>
+            </div>
+        </div>
+        <div class="refreshLoader"><div></div></div>
+        <!-- ----------------------------------------------------------- -->
+        <div class="settings" id="pistonMag">
+            <button class="closeButton" onclick="cancelSettings('pistonMag')"><i class="fa-solid fa-xmark"></i></button>
+            <p id="textPistonMagSettings" class="settingsTitle">Store piston</p>
+            <div class="option">
+                <input value="0" onclick="changeCheckboxValue(this)" type="checkbox" id="cbBlockPistonMag" />
+                <label id="textBlockPistonMag" for="cbBlockPistonMag">Block the piston</label>
+            </div>
+            <div class="bar">
+                <button id="buttonCancelSettingsPistonMag" onclick="cancelSettings('pistonMag')" class="cancelButton">Cancel</button>
+                <div class="applyButtonBox">
+                    <div class="hackingEffect"></div>
+                    <button id="buttonApplySettingsPistonMag" onclick="applySettings('pistonMag')" class="applyButton">Hack</button>
+                </div>
+            </div>
+        </div>
+        <div class="settings" id="carpet">
+            <button class="closeButton" onclick="cancelSettings('carpet')"><i class="fa-solid fa-xmark"></i></button>
+            <p id="textCarpetSettings" class="settingsTitle">Conveyor</p>
+            <div class="option">
+                <input value="0" onclick="changeCheckboxValue(this)" type="checkbox" id="cbAllowMovementCarpet" />
+                <label id="textBlockCarpet" for="cbAllowMovementCarpet">Block the Conveyor</label>
+            </div>
+            <div class="bar">
+                <button id="buttonCancelSettingsCarpet" onclick="cancelSettings('carpet')" class="cancelButton">Cancel</button>
+                <div class="applyButtonBox">
+                    <div class="hackingEffect"></div>
+                    <button id="buttonApplySettingsCarpet" onclick="applySettings('carpet')" class="applyButton">Hack</button>
+                </div>
+            </div>
+        </div>
+        <div class="settings" id="piston1">
+            <button class="closeButton" onclick="cancelSettings('piston1')"><i class="fa-solid fa-xmark"></i></button>
+            <p id="textPiston1Settings" class="settingsTitle">Piston</p>
+            <div class="option">
+                <input value="0" onclick="changeCheckboxValue(this)" type="checkbox" id="cbBlockPiston1" />
+                <label id="textBlockPiston1" for="cbBlockPiston1">Block the carpet</label>
+            </div>
+            <div class="bar">
+                <button id="buttonCancelSettingsPiston1" onclick="cancelSettings('piston1')" class="cancelButton">Cancel</button>
+                <div class="applyButtonBox">
+                    <div class="hackingEffect"></div>
+                    <button id="buttonApplySettingsPiston1" onclick="applySettings('piston1')" class="applyButton">Hack</button>
+                </div>
+            </div>
+        </div>
+        <div class="settings" id="piston2">
+            <button class="closeButton" onclick="cancelSettings('piston2')"><i class="fa-solid fa-xmark"></i></button>
+            <p id="textPiston2Settings" class="settingsTitle">Piston</p>
+            <div class="option">
+                <input value="0" onclick="changeCheckboxValue(this)" type="checkbox" id="cbBlockPiston2" />
+                <label id="textBlockPiston2" for="cbBlockPiston2">Block the carpet</label>
+            </div>
+            <div class="bar">
+                <button id="buttonCancelSettingsPiston2" onclick="cancelSettings('piston2')" class="cancelButton">Cancel</button>
+                <div class="applyButtonBox">
+                    <div class="hackingEffect"></div>
+                    <button id="buttonApplySettingsPiston2" onclick="applySettings('piston2')" class="applyButton">Hack</button>
+                </div>
+            </div>
+        </div>
+        <div class="settings" id="barrier">
+            <button class="closeButton" onclick="cancelSettings('barrier')"><i class="fa-solid fa-xmark"></i></button>
+            <p id="textBarrierSettings" class="settingsTitle">Barrier</p>
+            <div class="option">
+                <input value="0" onclick="changeCheckboxValue(this)" type="checkbox" id="cbBlockBarrier" />
+                <label id="textBlockBarrier" for="cbBlockBarrier">Block the barrier</label>
+            </div>
+            <div class="bar">
+                <button id="buttonCancelSettingsBarrier" onclick="cancelSettings('barrier')" class="cancelButton">Cancel</button>
+                <div class="applyButtonBox">
+                    <div class="hackingEffect"></div>
+                    <button id="buttonApplySettingsBarrier" onclick="applySettings('barrier')" class="applyButton">Hack</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

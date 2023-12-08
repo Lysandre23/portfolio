@@ -242,6 +242,15 @@ document.getElementById("go_to_birds").addEventListener("click", () => {
 document.getElementById("go_to_isocube").addEventListener("click", () => {
     window.open("./projects/Isocube/index.html");
 });
+document.getElementById("go_to_geo").addEventListener("click", () => {
+    window.open("https://lysandre23.github.io/Geo");
+});
+document.getElementById("go_to_ihm").addEventListener("click", () => {
+    window.open("./projects/IHM/index.html");
+});
+document.getElementById("go_to_tdf").addEventListener("click", () => {
+    window.open("./projects/TDF/index.html");
+});
 
 var projectsDiv = document.getElementById("projects");
 var scrollArrow = document.getElementById("scroll_arrow");
