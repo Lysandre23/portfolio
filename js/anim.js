@@ -228,19 +228,19 @@ function show_tag() {
 }
 
 document.getElementById("go_to_raycast").addEventListener("click", () => {
-    window.open("../projects/RayCast/index.html");
+    window.open("./projects/RayCast/index.html");
 });
 document.getElementById("go_to_sudoku").addEventListener("click", () => {
-    window.open("../projects/Sudoku/index.html");
+    window.open("./projects/Sudoku/index.html");
 });
 document.getElementById("go_to_pong").addEventListener("click", () => {
-    window.open("../projects/Pong/index.html?gaming=" + (tunned_cursor == "gaming" ? true : false));
+    window.open("./projects/Pong/index.html?gaming=" + (tunned_cursor == "gaming" ? true : false));
 });
 document.getElementById("go_to_birds").addEventListener("click", () => {
-    window.open("../projects/Birds/index.html");
+    window.open("./projects/Birds/index.html");
 });
 document.getElementById("go_to_isocube").addEventListener("click", () => {
-    window.open("../projects/Isocube/index.html");
+    window.open("./projects/Isocube/index.html");
 });
 
 var projectsDiv = document.getElementById("projects");
